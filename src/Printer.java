@@ -4,7 +4,7 @@ import lejos.nxt.Motor;
 /*****   
  * Group 5
  * @author Scott Cooper	- 260503452
- * @author Liqing Ding - 
+ * @author Liqing Ding - 260457392
  * 
  * <br><br>
  * Printer to display information to NXT LCD screen
@@ -22,7 +22,7 @@ public class Printer{
 	 * Print the controller type and current distance
 	 * @param distance The current distance from the wall.
 	 */
-	public void updateDisplay(int distance) {
+	public void updateDisplay(final int distance) {
 		new Thread(new Runnable(){
 			public void run(){
 				// Display current controller type

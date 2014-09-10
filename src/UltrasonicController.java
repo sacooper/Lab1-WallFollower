@@ -4,7 +4,7 @@ import lejos.nxt.NXTRegulatedMotor;
 /*****   
  * Group 5
  * @author Scott Cooper	- 260503452
- * @author Liqing Ding - 
+ * @author Liqing Ding - 260457392
  * 
  * @requirement Sensor must be positioned at a 45 degree angle
  * @requirement Robot must be on the right of the wall

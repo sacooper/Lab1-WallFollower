@@ -13,7 +13,7 @@ import lejos.nxt.UltrasonicSensor;
  * use and the UltrasonicController to act upon the change in distance.
  */
 
-public class UltrasonicPoller implements Runnable{
+public class UltrasonicPoller extends Thread {
 	private UltrasonicSensor us;
 	private UltrasonicController controller;
 	private Printer printer;
@@ -37,7 +37,7 @@ public class UltrasonicPoller implements Runnable{
 //			controller.processUSData(us.getDistance());
 			us.ping();
 			int[] dists = new int[8];
-			us.getDistance();
+
 			int c = us.getDistances(dists), s = 0;
 			if (c > 0){ 
 				for (int i = 0; i < c; i++) 

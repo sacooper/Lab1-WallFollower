@@ -59,7 +59,7 @@ public class Lab1 {
 		}
 		
 		// Start printer and poller
-		usPoller.run();
+		usPoller.start();
 		
 		//Wait for exit button press and exit
 		while (Button.waitForAnyPress() != Button.ID_ESCAPE);

@@ -16,8 +16,6 @@ local.properties
 .classpath
 .project
 
-# UML Diagram
-*.ucls
 # External tool builders
 .externalToolBuilders/
 

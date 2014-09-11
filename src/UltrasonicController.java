@@ -29,7 +29,7 @@ public abstract class UltrasonicController {
 		BAND_WIDTH;
 	
 	protected final NXTRegulatedMotor 
-		leftMotor = Motor.B, 
+		leftMotor = Motor.A, 
 		rightMotor = Motor.C; 
 
 	private int distance, gapCount;

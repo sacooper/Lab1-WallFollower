@@ -53,8 +53,7 @@ public class PController extends UltrasonicController {
 		leftMotor.setSpeed(Math.max((MOTOR_STRAIGHT - SCALING_FACTOR * error) , MIN_SPEED));
 		rightMotor.setSpeed(Math.min((MOTOR_STRAIGHT + SCALING_FACTOR * error), MAX_SPEED));
 		leftMotor.forward();
-		rightMotor.forward();
-	}
+		rightMotor.forward();}
 	
 	/*****************************************************
 	 * Increases the speed of the leftMotor and reduces the speed of the rightMotor

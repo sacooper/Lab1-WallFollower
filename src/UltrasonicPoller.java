@@ -33,20 +33,10 @@ public class UltrasonicPoller extends Thread {
 	public void run() {
 		while (true) {
 			//process collected data
-			
-//			controller.processUSData(us.getDistance());
-			us.ping();
-			int[] dists = new int[8];
+			int distance = us.getDistance();
+			controller.processUSData(distance);
+			printer.updateDisplay(distance);
 
-			int c = us.getDistances(dists), s = 0;
-			if (c > 0){ 
-				for (int i = 0; i < c; i++) 
-					s+= dists[i];
-				int d = (int)((double)s/c);
-				controller.processUSData(d);
-				printer.updateDisplay(d);
-			}
-				
 			
 			try { Thread.sleep(DELAY); } catch(Exception e){}
 		}

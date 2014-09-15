@@ -1,25 +1,27 @@
 import lejos.nxt.LCD;
 import lejos.nxt.Motor;
 
-/*****   
+/******************************************************************************
  * Group 5
  * @author Scott Cooper	- 260503452
  * @author Liqing Ding - 260457392
  * 
  * <br><br>
  * Printer to display information to NXT LCD screen
- */
+ *****************************************************************************/
 public class Printer{
 	private final int option;
-	/*****
+	
+	/***
 	 * Instantiate a new Printer with 
-	 * @param option
+	 * @param option The current mode the wall follower is in (PType or BangBang
 	 */
 	public Printer(int option) {
 		this.option = option;}
 	
 	/**
-	 * Print the controller type and current distance
+	 * Print the controller type, current distance from the wall, and motor speeds.
+	 * Printing occurs in a separate thread.
 	 * @param distance The current distance from the wall.
 	 */
 	public void updateDisplay(final int distance) {
@@ -38,8 +40,7 @@ public class Printer{
 				// Display motor speeds
 				LCD.drawInt(Motor.B.getSpeed(), 0, 3);
 				LCD.drawInt(Motor.C.getSpeed(), 4, 3);
-		}}).start();
-	}
+		}}).start();}
 	
 	/***
 	 * Print the main menu

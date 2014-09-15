@@ -7,6 +7,8 @@ import lejos.nxt.UltrasonicSensor;
  * 
  * @requirement Sensor must be positioned at a 45 degree angle
  * @requirement Robot must be on the right of the wall
+ * @requirement Ultrasonic Sensor is plugged into port S1
+ * @requirement The left and right motors are plugged into A and C respectively
  * 
  * Ultrasonic Poller that controls the rate at which the NXT Unit
  * readjusts. This must be instantiated with the UltrasonicSensor to
@@ -36,7 +38,6 @@ public class UltrasonicPoller extends Thread {
 			int distance = us.getDistance();
 			controller.processUSData(distance);
 			printer.updateDisplay(distance);
-
 			
 			try { Thread.sleep(DELAY); } catch(Exception e){}
 		}
